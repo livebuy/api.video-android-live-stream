@@ -61,7 +61,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    api "io.github.livebuy:streampack:mirror-test"
+    api "io.github.livebuy:streampack:mirror-test-SNAPSHOT"
     implementation "io.github.thibaultbee:streampack-extension-rtmp:$streamPackVersion"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
 }
