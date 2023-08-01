@@ -15,7 +15,7 @@ buildscript {
         targetSdkVersion = 31
 
         // StreamPack
-        streamPackVersion = "2.5.2"
+        streamPackVersion = "2.5.5"
     }
     repositories {
         google()
@@ -34,7 +34,13 @@ buildscript {
 allprojects {
     repositories {
         google()
-        mavenCentral()       
+        mavenCentral()     
+        maven { url 'https://jitpack.io' }
+    }
+    configurations.all {
+        resolutionStrategy.dependencySubstitution {
+            substitute module('io.github.thibaultbee:streampack') with module("com.github.livebuy.StreamPack:streampack:$streamPackVersion")
+        }
     }
 }
 
